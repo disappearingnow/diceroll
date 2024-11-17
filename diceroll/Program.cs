@@ -6,6 +6,11 @@
  5. Game ends
  */
 using diceroll.DiceRoller;
+using diceroll.MessagePrinter;
+using diceroll.AnswerChecker;
 
 int roll = DiceRoller.RollDice();
-Console.WriteLine(roll);
+int guess = 3;
+Console.WriteLine("guess is: " + guess);
+Console.WriteLine("roll is: " + roll);
+Console.WriteLine(AnswerChecker.CheckAnswer(guess, roll) ? "yep" : "nope");
