@@ -8,9 +8,10 @@
 using diceroll.DiceRoller;
 using diceroll.MessagePrinter;
 using diceroll.AnswerChecker;
+using diceroll.InputHandler;
 
 int roll = DiceRoller.RollDice();
-int guess = 3;
-Console.WriteLine("guess is: " + guess);
-Console.WriteLine("roll is: " + roll);
+
+int guess = InputHandler.TakeInput();
+
 Console.WriteLine(AnswerChecker.CheckAnswer(guess, roll) ? "yep" : "nope");
