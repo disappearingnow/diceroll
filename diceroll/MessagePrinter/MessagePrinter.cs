@@ -6,8 +6,9 @@ static class MessagePrinter
     const string InputPrompt = "Enter a number between 1 and 6.";
     const string WinMessage = "Correct!  You have won the game.";
     const string LossMessage = "You lose.  Please try again!";
+    const string TryAgainMessage = "Nope.  Try again!";
 
-    public static void PrintWelcome()
+    public static void PrintWelcomeMessage()
     {
         Console.WriteLine(WelcomeMessage);
     }
@@ -22,5 +23,10 @@ static class MessagePrinter
     public static void PrintLossMessage()
     {
         Console.WriteLine(LossMessage);
+    }
+
+    public static void PrintTryAgainMessage()
+    {
+        Console.WriteLine(TryAgainMessage);
     }
 }
