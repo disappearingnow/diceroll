@@ -12,6 +12,26 @@ using diceroll.InputHandler;
 
 int roll = DiceRoller.RollDice();
 
-int guess = InputHandler.TakeInput();
+MessagePrinter.PrintWelcomeMessage();
 
-Console.WriteLine(AnswerChecker.CheckAnswer(guess, roll) ? "yep" : "nope");
+for (int i = 0; i < 3; i++)
+{
+    int guess = InputHandler.TakeInput();
+
+    if (AnswerChecker.CheckAnswer(guess, roll))
+    {
+        MessagePrinter.PrintWinMessage();
+        break;
+    }
+    else
+    {
+        if (i == 2)
+        {
+            MessagePrinter.PrintLossMessage();
+        }
+        else
+        {
+            MessagePrinter.PrintTryAgainMessage();
+        }
+    }
+}
