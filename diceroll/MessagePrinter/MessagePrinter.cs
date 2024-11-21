@@ -1,6 +1,6 @@
 ﻿namespace diceroll.MessagePrinter;
 
-static class MessagePrinter
+public static class MessagePrinter
 {
     const string WelcomeMessage = "Welcome to the dice roll game.  A dice has just been rolled.  Guess that value by inputting a number between 1 and 6.  You have three attempts";
     const string InputPrompt = "Enter a number between 1 and 6.";

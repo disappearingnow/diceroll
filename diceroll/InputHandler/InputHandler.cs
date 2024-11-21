@@ -2,7 +2,7 @@
 
 using diceroll.MessagePrinter;
 
-internal class InputHandler
+public class InputHandler
 {
     public static int TakeInput()
     {
