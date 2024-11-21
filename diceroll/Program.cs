@@ -5,33 +5,8 @@
  4. If user fails to guess correct dice value, they lose
  5. Game ends
  */
-using diceroll.DiceRoller;
-using diceroll.MessagePrinter;
-using diceroll.AnswerChecker;
-using diceroll.InputHandler;
+using diceroll.Game;
 
-int roll = DiceRoller.RollDice();
+Game game = new();
 
-MessagePrinter.PrintWelcomeMessage();
-
-for (int i = 0; i < 3; i++)
-{
-    int guess = InputHandler.TakeInput();
-
-    if (AnswerChecker.CheckAnswer(guess, roll))
-    {
-        MessagePrinter.PrintWinMessage();
-        break;
-    }
-    else
-    {
-        if (i == 2)
-        {
-            MessagePrinter.PrintLossMessage();
-        }
-        else
-        {
-            MessagePrinter.PrintTryAgainMessage();
-        }
-    }
-}
+game.PlayGame();
